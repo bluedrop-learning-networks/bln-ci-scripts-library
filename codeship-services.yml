@@ -1,0 +1,12 @@
+test:
+  build:
+    dockerfile: Dockerfile
+  cached: true
+  environment:
+    DATABASE_URL: postgres://postgres@postgres:5432/postgres
+  links:
+    - postgres
+
+postgres:
+  image: postgres
+  cached: true
