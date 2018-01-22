@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Add the following environment variables to your project configuration (otherwise the defaults below will be used)
+# Add the following environment variables to your project configuration
 # * DATABASE_URL: The postgres connection url
-# * MAX_ATTEMPTS: The number of attempts to make before giving up, each attempt is about 10 seconds
+# * MAX_ATTEMPTS: The number of attempts to make before giving up, each attempt is about 3-4 seconds
 # * PGCONNECT_TIMEOUT: The connection timeout parameter for psql
 #
 # The following commands are required:

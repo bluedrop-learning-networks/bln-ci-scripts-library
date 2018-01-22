@@ -4,9 +4,15 @@ test:
   cached: true
   environment:
     DATABASE_URL: postgres://postgres@postgres:5432/postgres
+    RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672/
   links:
     - postgres
+    - rabbitmq
 
 postgres:
-  image: postgres
+  image: postgres:alpine
+  cached: true
+
+rabbitmq:
+  image: rabbitmq:management-alpine
   cached: true

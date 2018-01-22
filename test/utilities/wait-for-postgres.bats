@@ -3,7 +3,7 @@
 setup() {
 	export MAX_ATTEMPTS=60
 	export PGCONNECT_TIMEOUT=5
-	export DATABASE_URL="${DATABASE_URL:-postgres://postgres@localhost:5432/postgres}"
+	export DATABASE_URL="${DATABASE_URL:-postgres://postgres:postgres@localhost:5432/postgres}"
 }
 
 @test "[utilities/wait-for-postgres.bash] Check if postgres is available" {
