@@ -1,8 +1,6 @@
 #!/usr/bin/env bats
 
 setup() {
-	export MAX_ATTEMPTS=60
-	export PGCONNECT_TIMEOUT=5
 	export DATABASE_URL="${DATABASE_URL:-postgres://postgres:postgres@localhost:5432/postgres}"
 }
 
@@ -14,7 +12,8 @@ setup() {
 }
 
 @test "[utilities/wait-for-postgres.bash] Check if postgres is not available" {
-	export MAX_ATTEMPTS=1
-	DATABASE_URL=postgres://does-not-exist run ./utilities/wait-for-postgres.bash
+	MAX_ATTEMPTS=1 \
+	DATABASE_URL=postgres://does-not-exist \
+	run ./utilities/wait-for-postgres.bash
 	[ "$status" -eq 1 ]
 }
