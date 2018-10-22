@@ -10,11 +10,10 @@ set -euo pipefail
 info "Installing Bats"
 # bats installs to ${HOME}/bats/bin
 export PATH="${HOME}/bats/bin/:${PATH}"
-\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/bats.sh | bash -s
+bash ./utilities/bats-install.bash
 ln -sf "${HOME}/bats/bin/"* "${HOME}/bin/"
 
-echo ${PATH}
 info "Installing Shellcheck"
-\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/shellcheck.sh | bash -s
+bash ./utilities/shellcheck-install.bash
 
 

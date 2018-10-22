@@ -3,12 +3,11 @@ FROM alpine
 # install base system
 RUN apk --no-cache add \
 	bash \
-	build-base \
-	cabal \
 	curl \
 	tar \
 	wget \
-	ghc
+	postgresql-client \
+	xz
 
 ENV PATH="/root/bin/:${PATH}"
 
@@ -17,12 +16,6 @@ RUN mkdir -p "/root/bin/"
 
 WORKDIR /app
 
-COPY test/setup.bash /app/test/setup.bash
+COPY . /app/
 
 RUN ./test/setup.bash
-
-# install additional libraries used in scripts
-RUN apk --no-cache add \
-	postgresql-client
-
-COPY . /app/
