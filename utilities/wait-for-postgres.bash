@@ -18,7 +18,7 @@ fi
 
 if ! command -v psql &> /dev/null; then
 	>&2 echo "psql command not found"
-	exit 1
+	exit 0
 fi
 
 # set connection timeout for psql
