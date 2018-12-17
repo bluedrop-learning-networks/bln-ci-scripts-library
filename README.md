@@ -20,13 +20,25 @@ comments follow the format:
 # \curl -sSL https://bitbucket.org/coursepark/codeship-scripts/raw/master/utilities/wait-for-postgres.bash | bash -s
 ```
 
+### Pin a version
+
+If the version of a script needs to be pinned, you can use a commit hash in place of `master` in the `curl` command:
+
+```
+\curl -sSL https://bitbucket.org/coursepark/codeship-scripts/raw/230bc74b351200b83e9dd851fed56dd88730b1bd/utilities/wait-for-postgres.bash | bash -s
+```
+
 **It is important that you follow those instructions and not simply copy / paste the scripts into your Codeship project configuration.**
 
 ## Scripts
 
 ### Utilities
 
+* [Install Bats](utilities/bats-install.bash)
+* [GemFury Deploy](utilities/gemfury-deploy.bash)
+* [Install Shellcheck](utilities/shellcheck-install.bash)
 * [Wait for postgres to start](utilities/wait-for-postgres.bash)
+* [Wait for RabbitMQ to start](utilities/wait-for-rabbitmq.bash)
 
 ## Testing
 
