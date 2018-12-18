@@ -17,7 +17,7 @@ set -u
 set -o pipefail
 
 if [[ -z "${GEM_FURY_API_KEY:-}" ]]; then
-	message "$(highlight "GEM_FURY_API_KEY") is not set, cannot continue"
+	>&2 echo "GEM_FURY_API_KEY is not set, cannot continue"
 	exit 1
 fi
 
