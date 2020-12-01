@@ -22,6 +22,8 @@ jobs:
 
       postgres:
         image: postgres:11-alpine
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
         ports:
         - 5432:5432
 
