@@ -9,4 +9,4 @@ set -euo pipefail
 
 info "Running Bash Automated Testing System..."
 info "...on utilities scripts"
-${HOME}/bin/bats test/utilities/*
+"${HOME}"/bin/bats test/utilities/*
