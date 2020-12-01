@@ -9,7 +9,7 @@ jobs:
     container: docker://koalaman/shellcheck-alpine
     steps:
     - uses: actions/checkout@v2
-    - run: shellcheck scripts/**/*.sh
+    - run: shellcheck utilities/*
 
   tests:
     runs-on: ubuntu-18.04
