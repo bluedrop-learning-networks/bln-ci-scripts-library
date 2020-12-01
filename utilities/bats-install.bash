@@ -26,4 +26,4 @@ mkdir -p "${HOME}/bats"
 rm -rf "${HOME}/bats-core-${BATS_VERSION}"
 ln -fs "${HOME}/bats/bin/bats" "${HOME}/bin/"
 
-bats --version
+${HOME}/bin/bats --version
