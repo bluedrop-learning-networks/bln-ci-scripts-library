@@ -13,7 +13,7 @@ export PATH="${HOME}/bats/bin/:${PATH}"
 bash ./utilities/bats-install.bash
 ln -sf "${HOME}/bats/bin/"* "${HOME}/bin/"
 
-info "Installing Shellcheck"
-bash ./utilities/shellcheck-install.bash
-
-
+# deprecated in favor of dedicated github actions Step
+# or add conditional logic so human operators can run that step on their workstations if they wish
+# info "Installing Shellcheck"
+# bash ./utilities/shellcheck-install.bash

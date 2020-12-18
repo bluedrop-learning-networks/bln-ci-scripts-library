@@ -1,8 +1,6 @@
 # Bluedrop Codeship Scripts
 
-[![Codeship Status for bluedrop-learning-networks/bln-ci-scripts-library](https://app.codeship.com/projects/f4f3dcc0-d400-0137-c730-7ad289b24d8e/status?branch=master)](https://app.codeship.com/projects/370229)
 
-A collection of useful scripts for use on [Codeship](https://codeship.com/) and similar tools.
 
 ## Using the scripts
 
