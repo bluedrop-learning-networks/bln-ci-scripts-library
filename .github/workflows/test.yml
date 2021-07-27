@@ -28,7 +28,7 @@ jobs:
         - 5432:5432
 
       rabbitmq:
-        image: rabbitmq:3-management-alpine
+        image: rabbitmq:3.8.19-management-alpine
         ports:
         - 5672:5672
         - 15672:15672
